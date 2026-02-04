@@ -126,6 +126,8 @@ body {
     background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .hero::before {
@@ -217,6 +219,8 @@ body {
 .services {
     padding: 6rem 0;
     background: linear-gradient(180deg, var(--primary-color) 0%, #1a2332 100%);
+    width: 100%;
+    max-width: 100vw;
 }
 
 .services-grid {
@@ -288,6 +292,8 @@ body {
 .projects {
     padding: 6rem 0;
     background: var(--primary-color);
+    width: 100%;
+    max-width: 100vw;
 }
 
 .projects-grid {
@@ -373,6 +379,8 @@ body {
 .contact {
     padding: 6rem 0;
     background: linear-gradient(180deg, var(--primary-color) 0%, #1a2332 100%);
+    width: 100%;
+    max-width: 100vw;
 }
 
 .contact-content {
@@ -519,6 +527,8 @@ body {
     background: var(--primary-color);
     border-top: 1px solid var(--border-color);
     padding: 2rem 0;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .footer-content {
