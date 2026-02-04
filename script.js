@@ -132,33 +132,33 @@ if (contactForm) {
     });
 }
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Add parallax effect to hero section - DISABLED to prevent scroll issues
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+//     }
+// });
 
-// Typing effect for hero title (optional enhancement)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    let index = 0;
+// Typing effect for hero title - DISABLED to prevent scroll issues
+// const heroTitle = document.querySelector('.hero-title');
+// if (heroTitle) {
+//     const text = heroTitle.textContent;
+//     heroTitle.textContent = '';
+//     let index = 0;
     
-    function typeWriter() {
-        if (index < text.length) {
-            heroTitle.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 50);
-        }
-    }
+//     function typeWriter() {
+//         if (index < text.length) {
+//             heroTitle.textContent += text.charAt(index);
+//             index++;
+//             setTimeout(typeWriter, 50);
+//         }
+//     }
     
-    // Start typing effect when page loads
-    setTimeout(typeWriter, 500);
-}
+//     // Start typing effect when page loads
+//     setTimeout(typeWriter, 500);
+// }
 
 // Add hover effect to cards
 const cards = document.querySelectorAll('.service-card, .project-card');
@@ -187,22 +187,23 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections for fade-in effect
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+// Observe all sections for fade-in effect - DISABLED to prevent scroll issues
+// document.querySelectorAll('section').forEach(section => {
+//     section.style.opacity = '0';
+//     section.style.transform = 'translateY(30px)';
+//     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+//     observer.observe(section);
+// });
 
 // Add loading animation
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
+    // Remove the loading animation that was causing scroll issues
+    // document.body.style.opacity = '0';
+    // document.body.style.transition = 'opacity 0.5s ease';
     
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    // setTimeout(() => {
+    //     document.body.style.opacity = '1';
+    // }, 100);
 });
 
 // Cursor trail effect (optional enhancement)
